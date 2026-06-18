@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAREX - Portal de Competências & Aptidões</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-branding">
+            <div class="branding-content">
+                <img src="assets/images/logo-parex.png" alt="PAREX S.A. Logo" class="logo-industria">
+                <h1>Mapeamento de Competências</h1>
+                <p>Transformando o capital humano em dados estratégicos para a Indústria Metalmecânica.</p>
+            </div>
+        </div>
+
+        <div class="login-box">
+            <h2>Logar no Sistema</h2>
+            <p class="subtitle">Insira as suas credenciais para continuar</p>
+
+            <form id="formLogin" action="#" method="POST">
+                
+                <div class="input-group">
+                    <label for="perfil">Perfil de Acesso</label>
+                    <select id="perfil" name="perfil" required>
+                        <option value="" disabled selected>Selecione o seu perfil...</option>
+                        <option value="colaborador">Colaborador (Quiz & Perfil)</option>
+                        <option value="gestor">Gestor de RH (Painel Estratégico)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail Corporativo</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@parex.com.br" required autocomplete="username">
+                </div>
+
+                <div class="input-group">
+                    <div class="label-row">
+                        <label for="password">Palavra-passe</label>
+                        <a href="#" id="btnEsqueceu" class="forgot-link">Esqueceu-se da senha?</a>
+                    </div>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password">
+                </div>
+
+                <button type="submit" class="btn-login">Entrar no Portal</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalRecuperacao" class="modal-recovery hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Recuperar Acesso</h3>
+            <p>Insira o seu e-mail corporativo cadastrado. Enviaremos um link para redefinir a sua palavra-passe.</p>
+            
+            <form id="formRecuperacao">
+                <div class="input-group">
+                    <label for="emailRecupera">E-mail Corporativo</label>
+                    <input type="email" id="emailRecupera" required placeholder="exemplo@parex.com.br">
+                </div>
+                <button type="submit" class="btn-recovery">Enviar Instruções</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

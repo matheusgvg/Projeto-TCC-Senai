@@ -8,23 +8,23 @@
   ],
   "rewrites": [
     {
-      "src": "/backend/index.php",
+      "source": "/backend/index.php",
       "dest": "/backend/index.php"
     },
     {
-      "src": "/assets/(.*)",
+      "source": "/assets/(.*)",
       "dest": "/frontend/assets/$1"
     },
     {
-      "src": "/dashboard/(.*)",
+      "source": "/dashboard/(.*)",
       "dest": "/frontend/dashboard/$1"
     },
     {
-      "src": "/quiz/(.*)",
+      "source": "/quiz/(.*)",
       "dest": "/frontend/quiz/$1"
     },
     {
-      "src": "/",
+      "source": "/",
       "dest": "/frontend/index.html"
     }
   ]

@@ -257,7 +257,108 @@ body.dashboard-page {
 
 /* Ajustes para telas menores (responsividade simples) */
 @media (max-width: 900px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .filtros-container {
+        flex-direction: column;
+    }
+
+    .filtro-campo {
+        min-width: auto;
+        width: 100%;
+    }
+
     .dashboard-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard-header {
+        padding: 18px 14px 16px;
+    }
+
+    .header-inner {
+        gap: 14px;
+    }
+
+    .dashboard-main {
+        margin: 16px auto;
+        padding: 0 12px;
+        width: 100%;
+    }
+
+    .dashboard-grid {
+        gap: 18px;
+    }
+
+    .painel-funcionarios,
+    .painel-graficos {
+        padding: 16px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .header-label,
+    .gestor-saudacao {
+        font-size: 0.78rem;
+    }
+
+    .btn-sair {
+        width: 100%;
+        text-align: center;
+        padding: 12px 14px;
+    }
+
+    .kpis-section {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .tabela-wrapper {
+        overflow-x: auto;
+    }
+
+    .tabela-colaboradores {
+        min-width: 720px;
+    }
+
+    .tabela-colaboradores th,
+    .tabela-colaboradores td {
+        padding: 10px 12px;
+        font-size: 0.82rem;
+    }
+
+    .canvas-wrapper {
+        height: 200px;
+    }
+
+    .recomendacoes-treinamento {
+        padding: 14px;
+    }
+
+    .filtros-container {
+        display: grid;
+        gap: 14px;
+    }
+
+    .filtro-campo {
+        min-width: auto;
+    }
+
+    .painel-funcionarios h2,
+    .painel-graficos h2 {
+        font-size: 1.25rem;
+        margin-bottom: 14px;
     }
 }

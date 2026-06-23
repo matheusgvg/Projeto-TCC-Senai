@@ -241,9 +241,27 @@ body.quiz-page {
     z-index: 1000;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
+    .quiz-header-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .quiz-header {
+        padding: 22px 18px 18px;
+    }
+
+    .quiz-main {
+        padding: 0 18px;
+    }
+
     .quiz-card {
-        padding: 22px 18px;
+        padding: 28px 22px;
+    }
+
+    .badge-categoria {
+        font-size: 0.78rem;
     }
 
     .quiz-acoes {
@@ -252,13 +270,72 @@ body.quiz-page {
     }
 
     .acoes-direita {
+        width: 100%;
         flex-direction: column;
+    }
+
+    .acoes-direita button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .quiz-header {
+        padding: 18px 14px 16px;
+    }
+
+    .quiz-header-inner {
+        gap: 14px;
+    }
+
+    .quiz-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .barra-progresso {
+        height: 8px;
+    }
+
+    .texto-progresso {
+        font-size: 0.85rem;
+    }
+
+    .quiz-card {
+        padding: 20px 16px;
+    }
+
+    .opcao-resposta {
+        padding: 12px 14px;
+    }
+
+    .quiz-acoes {
+        gap: 12px;
+    }
+
+    .acoes-direita {
+        width: 100%;
     }
 
     .btn-primario,
     .btn-secundario,
     .btn-salvar {
         width: 100%;
+    }
+
+    .resumo-notas {
+        gap: 12px;
+    }
+
+    .grafico-wrapper {
+        max-width: 100%;
+        height: auto;
+        padding: 14px;
+    }
+
+    .toast {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
     }
 }
 

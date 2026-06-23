@@ -17,17 +17,18 @@
 
 body {
     background-color: var(--bg-gray);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 /* Container de Login */
 .login-container {
     display: flex;
-    width: 900px;
-    height: 550px;
+    width: min(100%, 900px);
+    min-height: 500px;
     background: var(--white);
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -247,4 +248,69 @@ body {
 
 .cadastro-voltar a:hover {
     color: var(--primary-color);
+}
+
+/* Responsividade Mobile */
+@media (max-width: 900px) {
+    .login-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .login-branding,
+    .login-box {
+        padding: 30px 24px;
+    }
+
+    .logo-industria {
+        width: 220px;
+        margin: 0 auto 20px;
+    }
+
+    .login-branding {
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 12px;
+    }
+
+    .login-container {
+        border-radius: 10px;
+    }
+
+    .login-branding,
+    .login-box {
+        padding: 24px 18px;
+    }
+
+    .login-branding h1 {
+        font-size: 1.5rem;
+    }
+
+    .login-branding p {
+        font-size: 0.95rem;
+    }
+
+    .label-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .forgot-link {
+        font-size: 0.85rem;
+    }
+
+    .btn-login,
+    .btn-recovery {
+        padding: 13px;
+    }
+
+    .modal-content {
+        width: min(92%, 420px);
+        padding: 22px;
+    }
 }
